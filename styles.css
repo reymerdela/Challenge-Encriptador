@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-de-fondo: #F3F5FC;
+    --white: #ffffff;
+    --dark-blue: #0A3871;
+    --light-gray: #D8DFE8;
+    --letra-negrita: #343A40;
+    --letra-normal: #495057;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: var(--color-de-fondo);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 5vh;
+}
+.main-container {
+    padding: 0 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.entrada {
+    font-size: 2rem;
+    background-color: var(--color-de-fondo);
+    width: 100%;
+    flex: 1;
+    font-weight: 400;
+    color: var(--dark-blue);
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.entrada::placeholder {
+    color: var(--dark-blue);
+}
+
+.advertencia {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 2vh 0
+}
+.advertencia p {
+    color: var(--letra-normal);
+    font-size: 0.8rem;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 3vh;
+}
+.boton {
+    padding: 2vh;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+.boton-encriptar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+}
+.boton-desencriptar {
+    background-color: var(--color-de-fondo);
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+aside {
+    margin: 5%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--white);
+    padding: 2vh;  
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--letra-normal);
+}
+.mensaje-t {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--letra-negrita);
+    margin-bottom: 2vh;
+}
+.mensaje-p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--letra-normal);
+}
+footer {
+    text-align: center;
+    padding: 1vh;
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.copiar {
+    background-color: #ffffff;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+    width: 100%;
+    padding: 2vh;
+    border-radius: 20px;
+    margin-top: 2vh;
+    display: none;
+}
