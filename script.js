@@ -60,6 +60,5 @@ copiar.addEventListener('click', () => {
     let textoCopiar = divtexto.textContent;
     navigator.clipboard.writeText(textoCopiar);
     console.log(textoCopiar);
-    navigator.clipboard.readText(textoCopiar);
 }); 
 
