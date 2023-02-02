@@ -123,4 +123,5 @@ footer {
     font-weight: 400;
     color: var(--letra-normal);
     margin-bottom: 2vh;
+    word-break: break-all;
 }
