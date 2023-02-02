@@ -11,8 +11,22 @@ const btnDesencriptar = document.getElementById("desencriptar");
 const texto = document.getElementsByTagName("textarea");
 const copiar = document.getElementById("copiar");
 const campoTexto = document.querySelector('aside');
+const mensaje1 = document.getElementsByClassName("mensaje-t");
+const mensaje2 = document.getElementsByClassName("mensaje-p");
 
+const divtexto = document.createElement('p');
+divtexto.classList.add('texto');
 
+let valor = false;
+
+function ocultar(){
+    if(valor == false){
+    copiar.classList.toggle('ocultar');
+    mensaje1[0].classList.toggle('ocultar');
+    mensaje2[0].classList.toggle('ocultar');
+    valor = true;
+}
+}
 
 btnEncriptar.addEventListener("click", () => {
     let textoEncriptado = texto[0].value;
@@ -23,7 +37,9 @@ btnEncriptar.addEventListener("click", () => {
     textoEncriptado = textoEncriptado.replaceAll("o", "ober");
     textoEncriptado = textoEncriptado.replaceAll("u", "ufat");
     console.log(textoEncriptado);
-    campoTexto.textContent = textoEncriptado;
+    campoTexto.prepend(divtexto);
+    divtexto.textContent = textoEncriptado;
+    ocultar();
     }
 });
 
@@ -36,6 +52,14 @@ btnDesencriptar.addEventListener("click", () => {
     textoDesencriptado = textoDesencriptado.replaceAll("ober", "o");
     textoDesencriptado = textoDesencriptado.replaceAll("ufat", "u");
     console.log(textoDesencriptado);
-    campoTexto.innerHTML = textoDesencriptado;
+    divtexto.textContent = textoDesencriptado;
     }
 });
+
+copiar.addEventListener('click', () => {
+    let textoCopiar = divtexto.textContent;
+    navigator.clipboard.writeText(textoCopiar);
+    console.log(textoCopiar);
+    navigator.clipboard.readText(textoCopiar);
+}); 
+
