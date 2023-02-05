@@ -60,7 +60,7 @@ body {
 .botones {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2vh;
     margin-bottom: 3vh;
 }
@@ -68,6 +68,8 @@ body {
     padding: 2vh;
     border-radius: 20px;
     font-size: 1rem;
+    flex: 1;
+    min-width: 190px;
 }
 .boton-encriptar {
     background-color: var(--dark-blue);
@@ -101,8 +103,7 @@ aside {
 footer {
     text-align: center;
     padding: 1vh;
-    background-color: var(--dark-blue);
-    color: #ffffff;
+    color: var(--letra-negrita);
     font-size: 1rem;
 }
 
@@ -124,4 +125,37 @@ footer {
     color: var(--letra-normal);
     margin-bottom: 2vh;
     word-break: break-all;
+}
+.img-aside {
+    display: none;
+}
+
+@media screen and (min-width: 920px) {
+    .main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 5%;
+        gap: 5%;
+    }
+    .main-container {
+        padding: 0;
+        flex: 4;
+        
+    }
+    aside {
+        margin: 5% 0;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    .img-aside {
+        display: block;
+        padding-bottom: 5%;
+    }
+    .texto {
+        margin: 3vh 0;
+    }
 }

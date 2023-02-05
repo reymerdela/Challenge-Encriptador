@@ -13,6 +13,8 @@ const copiar = document.getElementById("copiar");
 const campoTexto = document.querySelector('aside');
 const mensaje1 = document.getElementsByClassName("mensaje-t");
 const mensaje2 = document.getElementsByClassName("mensaje-p");
+const imagen = document.querySelector(".img-aside");
+
 
 const divtexto = document.createElement('p');
 divtexto.classList.add('texto');
@@ -24,6 +26,8 @@ function ocultar(){
     copiar.classList.toggle('ocultar');
     mensaje1[0].classList.toggle('ocultar');
     mensaje2[0].classList.toggle('ocultar');
+    imagen.setAttribute('style', 'display: none;');
+    campoTexto.setAttribute('style','justify-content: space-between')
     valor = true;
 }
 }
