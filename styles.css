@@ -130,6 +130,10 @@ footer {
     display: none;
 }
 
+button #copiar{
+    cursor: pointer;
+}
+
 @media screen and (min-width: 920px) {
     .main{
         flex-direction: row;
